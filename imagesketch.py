@@ -14,8 +14,8 @@ if uploaded_file is not None:
     img = cv2.imdecode(file_bytes, 1)
     img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
-    blur_intensity = st.slider("Blur Intensity", 1, 101, 21, step=2)
-    clarity = st.slider("Sketch Clarity", 50, 300, 256)
+    blur_intensity = st.slider("Tone", 1, 101, 21, step=2)
+    clarity = st.slider("Clarity", 50, 300, 256)
 
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     inv = 255 - gray
@@ -38,4 +38,5 @@ if uploaded_file is not None:
     st.download_button("Download Sketch", data=byte_im, file_name="sketch.png", mime="image/png")
 else:
     st.info("Please upload an image to start.")
+
 
