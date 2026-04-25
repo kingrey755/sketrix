@@ -4,8 +4,8 @@ import numpy as np
 from PIL import Image
 from io import BytesIO
 
-st.set_page_config(page_title="Image Sketcher", layout="wide")
-st.title("Image Sketcher")
+st.set_page_config(page_title="Sketrix", layout="wide")
+st.title("Sketrix")
 
 uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 
